@@ -66,72 +66,71 @@ shoppingCart.push("Meat");
 shoppingCart.unshift("Sugar");
 console.log(shoppingCart);
 let allergic = true;
-if (allergic) shoppingCart.splice(shoppingCart.indexOf("Honey"),1);
+if (allergic) shoppingCart.splice(shoppingCart.indexOf("Honey"), 1);
 console.log(shoppingCart);
-shoppingCart[shoppingCart.indexOf("Tea")] = "Green Tea"
+shoppingCart[shoppingCart.indexOf("Tea")] = "Green Tea";
 console.log(shoppingCart);
 
-console.log(countries)
-let ethiopia = "Ethiopia"
-if(countries.includes(ethiopia)){
-    console.log("ETHIOPIA")
-}else {
-    countries.push(ethiopia)
+console.log(countries);
+let ethiopia = "Ethiopia";
+if (countries.includes(ethiopia)) {
+  console.log("ETHIOPIA");
+} else {
+  countries.push(ethiopia);
 }
-console.log(countries)
+console.log(countries);
 
-console.log(webTechs)
-if(webTechs.includes("Sass")){
-    console.log("Sass is a CSS preprocess")
-}else webTechs.push("Sass")
-console.log(webTechs)
+console.log(webTechs);
+if (webTechs.includes("Sass")) {
+  console.log("Sass is a CSS preprocess");
+} else webTechs.push("Sass");
+console.log(webTechs);
 
-const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux']
-const backEnd = ['Node','Express', 'MongoDB']
+const frontEnd = ["HTML", "CSS", "JS", "React", "Redux"];
+const backEnd = ["Node", "Express", "MongoDB"];
 
-const fullStack = frontEnd.concat(backEnd)
-console.log(fullStack)
+const fullStack = frontEnd.concat(backEnd);
+console.log(fullStack);
 
-console.log("\n\nAges:")
-const ages = [19, 22, 19, 24, 20, 27, 26, 24, 25, 24,26]
-ages.sort()
-console.log(ages)
-console.log("Min: ", ages[0], "\nMax: ", ages[ages.length-1])
-console.log("Median: ")
-let agesLen = ages.length
-if(agesLen % 2 == 0){
-    console.log(ages[Math.round((agesLen/2-1 + agesLen/2+1) / 2)])
-}else {
-    console.log(ages[Math.round(agesLen/2)])
+console.log("\n\nAges:");
+const ages = [19, 22, 19, 24, 20, 27, 26, 24, 25, 24, 26];
+ages.sort();
+console.log(ages);
+console.log("Min: ", ages[0], "\nMax: ", ages[ages.length - 1]);
+console.log("Median: ");
+let agesLen = ages.length;
+if (agesLen % 2 == 0) {
+  console.log(ages[Math.round((agesLen / 2 - 1 + agesLen / 2 + 1) / 2)]);
+} else {
+  console.log(ages[Math.round(agesLen / 2)]);
 }
-let av = average(ages)
-console.log("Average: ", av)
+let av = average(ages);
+console.log("Average: ", av);
 
-function average(arr){
-    let sum = 0
-    let len = arr.length
-    for(let i=0; i<len; ++i){
-        sum += arr[i]
-    }
-    return Math.round(sum/len*100)/100
+function average(arr) {
+  let sum = 0;
+  let len = arr.length;
+  for (let i = 0; i < len; ++i) {
+    sum += arr[i];
+  }
+  return Math.round((sum / len) * 100) / 100;
 }
 
-console.log("Range: ", ages[agesLen-1] - ages[0])
-console.log(Math.abs(ages[0] - av) > Math.abs(ages[agesLen-1] - av))
-console.log(countries)
-console.log("First 10 countries: ", countries.slice(0,10))
+console.log("Range: ", ages[agesLen - 1] - ages[0]);
+console.log(Math.abs(ages[0] - av) > Math.abs(ages[agesLen - 1] - av));
+console.log(countries);
+console.log("First 10 countries: ", countries.slice(0, 10));
 // console.log(countries)
-console.log(countries[Math.round(countries.length/2)-1])
-let countriesLength = countries.length
-if(countriesLength % 2 == 0){
-    
-    var firstHalf = countries.slice(0,countriesLength/2)
-    var secondHalf = countries.slice(countriesLength/2, countriesLength)
-}else {
-    var firstHalf = countries.slice(0,Math.round(countriesLength/2))
-    var secondHalf = countries.slice(Math.round(countriesLength/2), )
+console.log(countries[Math.round(countries.length / 2) - 1]);
+let countriesLength = countries.length;
+if (countriesLength % 2 == 0) {
+  var firstHalf = countries.slice(0, countriesLength / 2);
+  var secondHalf = countries.slice(countriesLength / 2, countriesLength);
+} else {
+  var firstHalf = countries.slice(0, Math.round(countriesLength / 2));
+  var secondHalf = countries.slice(Math.round(countriesLength / 2));
 }
-console.log("cala tablica:")
-console.log(countries)
-console.log("firsthalf: ", firstHalf)
-console.log("secondHalf: ",secondHalf )
+console.log("cala tablica:");
+console.log(countries);
+console.log("firsthalf: ", firstHalf);
+console.log("secondHalf: ", secondHalf);
