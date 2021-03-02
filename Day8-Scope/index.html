@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Day 8</title>
+  </head>
+  <body>
+    <h2>Day 8 - Scope</h2>
+    <script src="day8.js"></script>
+    <script src="products.js"></script>
+    <script src="users.js"></script>
+    <script src="ex_lvl3.js"></script>
+    <script>
+      function addSignUpForm() {
+        document.getElementById("signin").innerHTML = "";
+        document.getElementById("signup").innerHTML = `
+          <form onsubmit="return signUp()">
+          <label for="fname">Username:</label><br>
+          <input type="text" id="uname" name="uname"><br>
+          <label for="lname">Email:</label><br>
+          <input type="text" id="email" name="email"><br>
+          <label for="lname">Password:</label><br>
+          <input type="password" id="pass" name="pass"><br><br>
+          <input type="submit" value="Submit">
+          </form> `;
+      }
+      function addSignInForm(){
+        document.getElementById("signup").innerHTML = "";
+        document.getElementById("signin").innerHTML = `
+        <form onsubmit="return signIn()">
+          <label for="fname">Username:</label><br>
+          <input type="text" id="uname" name="uname"><br>
+          <label for="lname">Password:</label><br>
+          <input type="password" id="pass" name="pass"><br><br>
+          <input type="submit" value="Submit">
+          </form> `;
+      }
+    </script>
+    <div style="font-size: 15px;">
+      <input type="button" value="SignIn" onclick="addSignInForm()"></button>
+      <input type="button" value="SignUp" onclick="addSignUpForm()"></button>
+    </div>
+    <div id="signup"></div>
+    <div id="signin"></div>
+  </body>
+</html>
