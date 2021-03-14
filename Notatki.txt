@@ -1,0 +1,77 @@
+-------------------------------------------------
+	# DAY 1
+
+## Skróty klawiszowe:
+Ctrl + Shift + I - otwiera konsole w Google Chrome
+Ctrl + Shift + J - otwiera narzędzia dla deweloperów
+
+## Ogólne:
+- 4 rodzaje skryptow JS:
+inline
+internal 
+external
+multiple external
+
+- preferowane umieszczanie skryptow JS w body a nie head
+- glowny plik - powiedzmy: "main.js" powinien byc umieszczany ponizej innych linkowanych skryptow JS, czyli
+najnizej robimy <script src = "main.js"></script> 
+
+## Typy danych
+- typy prymitywne:
+	String, Boolean, Null, undefined, Symbol, Number 
+- jesli funkcja nic nie zwraca, zwraca undefined
+- Null oznacza pustą wartość
+- do sprawdzania typu danej zmiennej uzywamy operatora 'typeof', np:
+	console.log(typeof 'asabeneh')
+	console.log(typeof 5)
+
+## Zmienne
+- var / let / const
+- const uzywamy ofc gdy dana zmienna ma przechowywac stala wartosc jak np nazwa kraju / wartosc sily grawitacji etc.
+- niezalecane uzycie var -> podatny na bledy
+
+Zasady pisania nazw zmiennych:
+- nie moze zaczynac sie od liczby
+- nie mozna uzywac specjalnych znakow poza dolarem ($) i podloga (_), np:
+	$num_1
+	_num$1
+	
+- konwencja -> camelCase -> firstName, lastName -> pierwsza mala, kazde kolejno slowo od duzej czyli bodajze lowerCamelCase
+- bez spacji pomiedzy slowami -> OCZYWISTE
+- nie mozna uzywac pauzy do zmiennych -> "first-name" niedopuszczalne !!!
+- dokladne roznice pomiedzy let, var i const w pliku o zrodle: C:\Users\Admin\Desktop\Staż\Wiedza informatyczna\let_var_const_Javascript.png
+
+------------------------------------------------
+	# Day 2
+
+## Podzielenie typów na prymitywne i nieprymitywne (ref do obiektów)
+- Prymitywne:
+Numbers, Strings, Booleans, Null, Undefined
+- Nieprymitywne:
+Objects, Functions, Arrays
+
+Prymitywne sa immutable, np: let word = 'nana' -> proba zmienienia go spowoduje blad.
+Nieprymitywne sa mutable - mozna je zmieniac.
+
+Nie porownujemy 'non-primitive data types' bo zwykle i tak dadza nam falsz, poniewaz zajmuja inny adres w pamieci wiec jest to zwykle bez sensu.
+Porownywanie nie spowoduje bledu ale zwykle zwroci false.
+
+## Numbers
+
+### Math Object
+- zawiera w sobie metody do pracowania z liczbami jak w Javie czy Pythonie, np:
+~Przyklad:
+	const PI = Math.PI
+	console.log(PI) // 3.141592653589793
+- inne funkcje: Math.round, Math.floor, Math.ceil, Math.min, Math.max, Math.random, Math.abs, Math.sqrt, Math.pow, Math.E, Math.log - logarytm naturalny (baza to stala Eulera),
+Math.sin, Math.cos
+
+~Przyklad - losowe liczby od 0 do 10
+	let randomNum = Math.random()         // generates 0 to 0.999
+	let numBtnZeroAndTen = randomNum * 11
+
+	console.log(numBtnZeroAndTen)         // this gives: min 0 and max 10.99
+
+	let randomNumRoundToFloor = Math.floor(numBtnZeroAndTen)
+	console.log(randomNumRoundToFloor)    // this gives between 0 and 10
+ 
