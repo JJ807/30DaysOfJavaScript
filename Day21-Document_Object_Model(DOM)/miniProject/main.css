@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  color: black;
+  font-size: 10px;
+  width: 200px;
+}
+
+.tab {
+  border-color: #c2c2c2;
+  border-collapse: separate;
+}
+
+td {
+  border: 1px solid #c2c2c2;
+  text-align: left;
+  padding-left: 20px;
+  vertical-align: middle;
+  color: rgb(255, 255, 255);
+  height: 35px;
+  width: 600px;
+}
+
+.span2020 {
+  font-size: 70px;
+}
